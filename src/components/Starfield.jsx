@@ -2,21 +2,22 @@ import React, { useRef, useEffect } from "react";
 
 export default function Starfield() {
   const canvasRef = useRef(null);
-  const starCount = 500;
+  const starCount = 2000;
   let stars = [];
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
 
-    let width = (canvas.width = window.innerWidth);
-    let height = (canvas.height = window.innerHeight);
+    let width = (canvas.width = document.documentElement.scrollWidth);
+    let height = (canvas.height = document.documentElement.scrollHeight);
+
     const centerX = width / 2;
     const centerY = height / 2;
 
     const resize = () => {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
+      width = canvas.width = document.documentElement.scrollWidth;
+      height = canvas.height = document.documentElement.scrollHeight;
     };
     window.addEventListener("resize", resize);
 
@@ -49,7 +50,7 @@ export default function Starfield() {
         ctx.beginPath();
         ctx.moveTo(px, py);
         ctx.lineTo(sx, sy);
-        ctx.strokeStyle = `rgba(173, 216, 230, ${1 - this.z / width})`; // light blue
+        ctx.strokeStyle = `rgba(173, 216, 230, ${1 - this.z / width})`;
         ctx.lineWidth = 1;
         ctx.stroke();
       }
@@ -58,7 +59,7 @@ export default function Starfield() {
     stars = Array.from({ length: starCount }, () => new Star());
 
     const draw = () => {
-      ctx.fillStyle = "rgba(0, 0, 0, 0.3)"; // deep space effect
+      ctx.fillStyle = "rgba(0, 0, 0, 0.3)";
       ctx.fillRect(0, 0, width, height);
 
       for (let star of stars) {
@@ -79,7 +80,15 @@ export default function Starfield() {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute top-0 left-0 w-full h-full pointer-events-none"
+      style={{
+        position: "fixed", // <-- schimbat din "absolute"
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        zIndex: -10,
+        pointerEvents: "none",
+      }}
     />
   );
 }

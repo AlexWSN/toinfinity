@@ -7,10 +7,14 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/a11y";
 
-export default function Certificates() {
+export default function Certificate() {
   return (
-    <section id="certificates" className="max-w-4xl mx-auto px-4 py-16">
-      <h2 className="text-3xl mb-8 text-sky-400">Certificates</h2>
+    <section
+      id="Certificate"
+      className="section-container relative z-10"
+      data-aos="fade-up">
+      {" "}
+      <h2 className="text-3xl mb-8 text-sky-400">Certificate</h2>
       <Swiper
         modules={[Navigation, Pagination, A11y]}
         spaceBetween={20}
