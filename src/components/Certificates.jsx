@@ -17,8 +17,7 @@ export default function Certificates() {
         slidesPerView={1}
         navigation
         pagination={{ clickable: true }}
-        loop
-      >
+        loop>
         <SwiperSlide>
           <img src="/certificates/certificate1.png" alt="Certificat 1" />
         </SwiperSlide>

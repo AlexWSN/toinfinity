@@ -5,69 +5,45 @@ export default function Aboutme() {
   const [showModels, setShowModels] = useState(false);
 
   return (
-    <section id="Aboutme" className="max-w-5xl mx-auto px-6 py-12 text-white">
+    <section id="aboutme" className="section-container" data-aos="fade-up">
       {/* Header */}
       <header className="text-center mb-12">
         <img
           src="/images/alexandra.jpeg"
           alt="Alexandra Sasu"
-          className="mx-auto rounded-full w-40 h-40 object-cover shadow-lg mb-6"
+          className="w-32 h-32 rounded-full object-cover shadow-md mx-auto relative z-10"
         />
-        <h1 className="text-3xl font-bold text-sky-400">
+        <h1 className="text-3xl font-bold text-sky-400 animate__animated animate__fadeInDown">
           Junior Full-Stack Developer
         </h1>
-        <p className="mt-4 max-w-3xl mx-auto text-gray-300">
+        <p className="mt-4 max-w-3xl mx-auto text-gray-300 animate__animated animate__fadeIn animate__delay-1s">
           Hi! I'm Alexandra — a creative junior fullstack developer with 1+
-          years of experience in building performant, scalable, and responsive
-          web solutions. I'm also a self-taught learner, constantly exploring
-          new technologies and best practices to improve my craft.
+          years of experience...
         </p>
       </header>
 
       {/* Descriere */}
-      <article className="mb-16 space-y-6 text-gray-300">
+      <article className="mb-16 space-y-6 text-gray-300 animate__animated animate__fadeInUp animate__delay-2s">
         <h2 className="text-2xl font-semibold text-sky-400">About Me</h2>
-        <p>
-          I had the pleasure of working for over 5 years as a supervisor in
-          parental education. During this time, I was involved in meaningful and
-          impactful projects, and I like to believe that, together with my team,
-          we made a positive difference on a national level, collaborating with
-          schools and educational institutions all across Romania.
-        </p>
-        <p>
-          Still, I felt I hadn’t quite found my place. After completing an
-          intensive one-year fullstack development course, I decided to
-          transition into a field that felt closer to my heart — partly out of a
-          desire to connect with people who share my mindset and passions.
-        </p>
-        <p>
-          I love painting — it helps me stay grounded and expressive in ways
-          words can't always reach. That’s why I’ve included a small selection
-          of my artwork in this portfolio: it’s a glimpse into the way I see and
-          feel the world. Music is my constant companion — mostly heavy metal
-          (with a funky start to every morning), and visual creativity flows
-          alongside it.
-        </p>
-        <p>
-          I've always been fascinated by 3D modeling, especially character
-          design. Over the past year, I’ve been learning Blender in my spare
-          time, and I’ve added here a few of my early experiments with digital
-          sculpting — raw, but made with joy. I’m the proud owner of a hope:
-          that one day I’ll learn to play the cello beautifully and own a '90
-          Honda Prelude.
-        </p>
+        <p>I had the pleasure of working for over 5 years as a supervisor...</p>
+        <p>Still, I felt I hadn’t quite found my place...</p>
+        <p>I love painting — it helps me stay grounded...</p>
+        <p>I've always been fascinated by 3D modeling...</p>
       </article>
+      <div className="relative z-10">{/* conținut */}</div>
 
       {/* Proiecte creative */}
-      <article className="mb-12">
+      <article className="mb-12 animate__animated animate__fadeInUp animate__delay-3s">
         <h2 className="text-2xl font-semibold text-sky-400 mb-4">
           My Creative Projects
         </h2>
         <img
           src="/images/sheldon.jpeg"
           alt="Sheldon"
-          className="w-full max-w-md mx-auto mb-6 rounded shadow"
+          className="w-full max-w-md mx-auto mb-6 rounded shadow animate__animated animate__zoomIn"
         />
+        <h1 className="text-red-500 text-5xl">TEST Tailwind Red</h1>
+
         <div className="flex gap-4 justify-center">
           <button
             onClick={() => {
@@ -90,7 +66,7 @@ export default function Aboutme() {
 
       {/* Galerie picturi */}
       {showPaintings && (
-        <div className="bg-gray-900 p-4 rounded-lg mb-8">
+        <div className="bg-gray-900 p-4 rounded-lg mb-8 animate__animated animate__fadeIn">
           <h3 className="text-xl mb-4 text-sky-400">Selected Paintings</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <img src="/images/charicatures.jpeg" alt="Charicatures" />
@@ -112,7 +88,7 @@ export default function Aboutme() {
 
       {/* Galerie modele */}
       {showModels && (
-        <div className="bg-gray-900 p-4 rounded-lg">
+        <div className="bg-gray-900 p-4 rounded-lg animate__animated animate__fadeIn">
           <h3 className="text-xl mb-4 text-sky-400">
             3D Character Modeling – Blender
           </h3>
