@@ -4,9 +4,9 @@
 @tailwind utilities;
 
 /* customStyles.css */
-.section-container {
+/*.section-container {
   @apply max-w-5xl mx-auto px-6 py-20 bg-black/40 backdrop-blur-md rounded-2xl text-white shadow-md;
-}
+}*/
 /*body {
   overflow-x: hidden;
 }*/
@@ -32,24 +32,71 @@ body,
 }
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #29826e;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #ffffff;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
   font-family: "Inter", sans-serif;
-  background-color: #000000; /* space-black */
+  color: white;
+  background-color: black;
   scroll-behavior: smooth;
+  font-family: "outfit";
 }
 
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px; /* padding lateral rezonabil */
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 50;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 60px;
+  font-size: 20px;
+  margin: 0; /* Elimină marginile default ale ul */
+  padding: 0; /* Elimină paddingul implicit */
+}
+.nav-connect {
+  padding: 20px 20px;
+  border-radius: 50px;
+  background: linear-gradient(267deg, #0b9f9f 0.36%, #190247 102.06%);
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.nav-connect:hover {
+  transform: scale(1.05);
+}
+
+.nav-menu li a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #38bdf8; /* un albastru deschis */
+}
+main {
+  padding-top: 60px; /* egal cu înălțimea navbarului */
+}
 h1 {
   font-size: 3.2em;
   line-height: 1.1;

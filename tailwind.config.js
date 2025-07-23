@@ -1,14 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      colors: {
-        space: {
-          DEFAULT: "#0b0c10",
-          blue: "#1f6feb",
-          light: "#f5f5f5",
-        },
+      fontFamily: {
+        outfit: ["Outfit", "sans-serif"],
+        pressstart: ['"Press Start 2P"', "cursive"],
       },
     },
   },

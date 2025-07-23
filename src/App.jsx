@@ -9,29 +9,23 @@ import Certificates from "./components/Certificate";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Starfield from "./components/Starfield";
+import Hero from "./components/Hero/Hero";
 
-<main className="relative z-10">
-  <Aboutme />
-  <Projects />
-  <Certificates />
-  <Experience />
-  <Contact />
-</main>;
-
-export default function App() {
+const App = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
   return (
     <div className="relative min-h-screen overflow-x-hidden z-0">
-      {/* Starfield pe fundal */}
+      {/* Fundal animat */}
       <div className="fixed inset-0 -z-10">
         <Starfield />
       </div>
 
       <Navbar />
-      <main className="relative z-10">
+      <Hero />
+      <main className="relative z-16">
         <Aboutme />
         <Projects />
         <Certificates />
@@ -40,4 +34,6 @@ export default function App() {
       </main>
     </div>
   );
-}
+};
+
+export default App;

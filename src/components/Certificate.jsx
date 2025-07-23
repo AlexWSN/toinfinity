@@ -10,7 +10,7 @@ import "swiper/css/a11y";
 export default function Certificate() {
   return (
     <section
-      id="Certificate"
+      id="certificate"
       className="section-container relative z-10"
       data-aos="fade-up">
       {" "}
